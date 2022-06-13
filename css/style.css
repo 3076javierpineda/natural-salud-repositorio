@@ -1,0 +1,468 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.grilla {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "header header header header"
+      "nav nav nav nav"
+      "section1 section1 section2 section2"
+      "section1 section1 section2 section2"
+      "footer footer footer footer";
+}
+
+.header{
+    grid-area: header;
+    background-color: rgb(121, 170, 42);
+}
+
+.header p{
+    background-color: white;
+    text-align: center;
+    margin-top: 10px;
+    padding: 5px 15px
+}
+
+.headerlogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly
+}
+
+.header img{
+    max-width: 340px;
+}
+
+.headerlogo i{
+    font-size: 40px;
+    color: white;
+}
+
+.headerlogo h3{
+    color: white;
+    text-align: center;
+}
+
+.nav{
+    grid-area: nav;
+    background-color: rgb(121, 170, 42);
+}
+
+.nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 7px;
+    font-size: small;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: green;
+}
+
+.section1{
+    grid-area: section1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+.section1up{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 5px;
+    padding: 10px;
+}
+
+.section1 img{
+    max-width: 200px;
+}
+
+.section1up h2{
+    text-align: center;
+    margin-bottom:  10px;
+}
+
+.section1up p{
+    font-size: 15px;
+    height: 100px;
+    position: relative;
+    left: 15px;
+}
+
+.section1down{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.section1down img{
+    max-width: 230px;
+}
+
+.section1down li{
+    font-size: 15px;
+    position: relative;
+    left: 25px;
+}
+
+.section2{
+    grid-area: section2;
+    display: flex;
+    flex-direction: row;
+    margin: 0 5px;
+    justify-content: space-around
+}
+
+.section2left{
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    margin: 10px 5px
+}
+
+.section2left p{
+    font-size: 14px;
+    text-align: justify;
+    position: relative;
+    top: 10px;
+}
+
+.section2left h4{
+    font-size: 12px;
+    text-align: center;
+}
+
+.section2right img{
+    max-height: 300px;
+    margin: 5px 2px;
+}
+
+.form{
+    margin: 6px auto;
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form div{
+    display: flex;
+    flex-direction: column;
+}
+
+.form input{
+    text-align: center;
+    width: 300px;
+    height: 1.5rem;
+    margin: 3px;
+}
+
+.form input[type=submit]:hover{
+    background-color: rgb(121, 170, 42);
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(121, 170, 42);
+    color: white;
+    padding: 5px;
+    align-items: center;
+}
+
+.footer2{
+    text-align: center;
+}
+
+.footer img{
+    width: 100px;
+}
+
+@media (max-width: 480px){
+    .grilla {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "header header header header"
+          "nav nav nav nav"
+          "section1 section1 section1 section1"
+          "section2 section2 section2 section2"
+          "footer footer footer footer";
+          padding: 10px;
+          width: 480px;
+}
+
+.header p{
+    display: none;
+}
+
+.headerlogo h3{
+    display: none;
+}
+
+.header{
+    width: 480px;
+}
+
+.headerlogo{
+    align-items: center;
+    flex-direction: column;
+}
+
+.header img{
+    max-width: 270px;
+}
+
+.headerlogo i{
+    font-size: 10px;
+    color: white;
+    margin: 20px auto;
+}
+
+.nav{
+    max-width: 450px;
+}
+
+.nav ul{
+    justify-content: space-around;
+    padding: 10px auto;
+    font-size: 10px;
+    flex-direction: column;
+}
+
+.section1{
+    display: none;
+}
+
+.section2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section2left{
+    width: 470px;
+    margin: 10px 0;
+    max-width: none;
+}
+
+.section2left p{
+    font-size: 20px;
+    width: 450px;
+    text-align: justify;
+}
+
+.section2left h4{
+    font-size: 18px;
+}
+
+.section2right img{
+    width: 400px;
+    margin: 5px 2px;
+}
+
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    max-width: 425px;
+}
+
+.footer img{
+    display: none;
+}
+
+.footer1{
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.footer1 div{
+    margin: 5px auto;
+}
+}
+
+@media (max-width: 768px){
+    .grilla {  
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+          "header header header header"
+          "nav nav nav nav"
+          "section1 section1 section1 section1"
+          "section2 section2 section2 section2"
+          "footer footer footer footer";
+}
+
+.header{
+    max-width: 750px;
+}
+
+.header img{
+    max-width: 250px;
+}
+
+.headerlogo i{
+    font-size: 30px;
+}
+
+.headerlogo h3{
+    font-size: 14px;
+}
+
+.nav{
+    max-width: 750px;
+}
+
+.nav ul{
+    justify-content: space-evenly;
+    padding: 12px;
+    font-size: medium;
+}
+
+.section1{
+    margin: 0 3px;
+    max-width: 745px;
+}
+
+.section1up{
+    padding: 20px;
+}
+
+.section1up p{
+    font-size: 13px;
+    position: relative;
+    left: 18px;
+}
+
+.section1down{
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.section2{
+    margin: 10px 3px;
+    max-width: 745px;
+}
+
+.footer{
+    max-width: 750px;
+    margin-top: 10px;
+}
+
+.footer1{
+    flex-direction: column;
+}
+
+.footer img{
+    display: none;
+}
+}
+
+.grillablog {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header header header header"
+        "nav nav nav nav"
+        "section1blog section1blog section1blog section1blog"
+        "section2blog section2blog section2blog section2blog"
+        "section3blog section3blog section3blog section3blog"
+        "footer footer footer footer";
+}
+
+.section1blog{
+    grid-area: section1blog;
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.section1blog img{
+    max-width: 300px;
+}
+
+.section1blog h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+.section1blog p{
+    max-width: 450px;
+    max-height: 180px;
+    margin: 10px 15px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.section2blog{
+    grid-area: section2blog;
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.section2blog img{
+    max-width: 300px;
+}
+
+.section2blog h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+.section2blog p{
+    max-width: 450px;
+    max-height: 180px;
+    margin: 10px 15px;
+    padding: 5px;
+    text-align: justify;
+}
+
+.section3blog{
+    grid-area: section3blog;
+    display: flex;
+    flex-direction: row;
+    margin: 10px auto;
+    align-items: center;
+}
+
+.section3blog img{
+    max-width: 300px;
+}
+
+.section3blog h2{
+    font-size: 20px;
+    text-align: center;
+}
+
+.section3blog p{
+    max-width: 450px;
+    max-height: 180px;
+    margin: 10px 15px;
+    padding: 5px;
+    text-align: justify;
+}
+
