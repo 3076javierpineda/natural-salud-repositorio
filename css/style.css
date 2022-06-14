@@ -17,6 +17,7 @@
 .header{
     grid-area: header;
     background-color: rgb(121, 170, 42);
+    background-image: linear-gradient(to top, rgb(121, 170, 42), rgb(209, 156, 58);
 }
 
 .header p{
