@@ -185,6 +185,7 @@
     flex-direction: row;
     justify-content: space-evenly;
     background-color: rgb(121, 170, 42);
+    background-image: linear-gradient(to bottom, rgb(121, 170, 42), rgb(209, 156, 58));
     color: white;
     padding: 5px;
     align-items: center;
